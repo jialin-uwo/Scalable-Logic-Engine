@@ -1,4 +1,6 @@
-Design Documentation   
+# CS2211 Group Project
+
+# Design Documentation   
 
 <table><tr><td>Version</td><td>Date</td><td>Author(s)</td><td>Summary of Changes</td></tr><tr><td>1.0</td><td>2025.10.22</td><td>Peiyong Wang, Zhixian Wang, Xinyan Cai, Junqi Zheng, Jialin Li</td><td>Create introduction, class diagram, user interface mockup, and summary sections.</td></tr><tr><td></td><td></td><td></td><td></td></tr></table>
 
