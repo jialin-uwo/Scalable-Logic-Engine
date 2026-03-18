@@ -1,0 +1,571 @@
+{
+  "_comment": "Game data for 'The House That Remembers'. Base schema by Owen, extended with optional messages for UI.",
+
+  "startingMessage": "You awaken in a mysterious mansion.\nYour goal is to find a route to escape — explore rooms, examine objects, use items, talk to characters, pick up useful things, and combine objects to solve puzzles.\nTry commands like 'go', 'examine', 'use', 'pick', 'drop', 'talk', and 'give' as you explore.",
+  "endingMessage": "You slip through the window into the overgrown garden. The cold night air fills your lungs as you leave the haunted mansion behind. (Side Ending)",
+  "startingLocation": "EntranceHall",
+  "endingLocation": "GardenExit",
+  "turnLimit": 50,
+  "startingInventory": [],
+
+  "icons": {
+    "inventory": "assets/icons/inventory.png",
+    "go": "assets/icons/go.png",
+    "examine": "assets/icons/examine.png",
+    "use": "assets/icons/use.png",
+    "talk": "assets/icons/talk.png",
+    "give": "assets/icons/give.png",
+    "pickup": "assets/icons/pickup.png",
+    "pick": "assets/icons/pickup.png",    
+    "drop": "assets/icons/drop.png",
+    "turns": "assets/icons/turns.png"
+  },
+
+  "locations": [
+    {
+      "name": "EntranceHall",
+      "description": "A grand hall. A heavy red door blocks the library.",
+      "image": "assets/images/locations/entrance_hall.jpg",
+      "message": "You are now in the Entrance Hall.",
+      "objects": ["Red Door", "Old Map"],
+      "connections": [
+        { "name": "stairsUp", "description": "A staircase leading up to the upstairs landing", "targetLocationName": "UpstairsLanding" },
+        { "name": "toDiningRoomDoor", "description": "A door leading to the dining room", "targetLocationName": "DiningRoom" },
+        { "name": "toStudyRoomDoor", "description": "A door leading to the study room", "targetLocationName": "StudyRoom" },
+        { "name": "toServantQuartersDoor", "description": "A door leading to the servant quarters", "targetLocationName": "ServantQuarters" }
+      ],
+      "character": null
+    },
+    {
+      "name": "UpstairsLanding",
+      "description": "A quiet landing above the hall.",
+      "image": "assets/images/locations/upstairs_landing.jpg",
+      "message": "You are now on the Upstairs Landing.",
+      "objects": ["Brass Key", "Note"],
+      "connections": [
+        { "name": "stairsDown", "description": "A staircase leading down to the entrance hall", "targetLocationName": "EntranceHall" },
+        { "name": "toStorageRoomDoor", "description": "A door leading to the storage room", "targetLocationName": "StorageRoom" }
+      ],
+      "character": null
+    },
+    {
+      "name": "StorageRoom",
+      "description": "A cramped storage room filled with old furniture and boxes.",
+      "image": "assets/images/locations/storage_room.jpg",
+      "message": "You squeeze into the Storage Room.",
+      "objects": ["Old Cabinet", "Stick"],
+      "connections": [
+        { "name": "backToUpstairsLanding", "description": "A door leading back to the upstairs landing", "targetLocationName": "UpstairsLanding" },
+        { "name": "backToDiningRoom", "description": "A door leading back to the dining room", "targetLocationName": "DiningRoom" },
+        { "name": "toStudyRoomDoor", "description": "A door leading to the study room", "targetLocationName": "StudyRoom" }
+      ],
+      "character": null
+    },
+    {
+      "name": "DiningRoom",
+      "description": "A long dining table under a dusty chandelier. Chairs lie overturned.",
+      "image": "assets/images/locations/dining_room.jpg",
+      "message": "You are now in the Dining Room.",
+      "objects": ["Silver Spoon"],
+      "connections": [
+        { "name": "toKitchenDoor", "description": "A door leading to the kitchen", "targetLocationName": "Kitchen" },
+        { "name": "backToEntranceHall", "description": "A door leading back to the entrance hall", "targetLocationName": "EntranceHall" },
+        { "name": "toLibraryDoor", "description": "A door leading to the library", "targetLocationName": "Library" },
+        { "name": "toStorageRoomDoor", "description": "A door leading to the storage room", "targetLocationName": "StorageRoom" }
+      ],
+      "character": "Ghostly Boy"
+    },
+    {
+      "name": "Kitchen",
+      "description": "A dark kitchen with a dripping faucet and scattered dishes.",
+      "image": "assets/images/locations/kitchen.jpg",
+      "message": "You step into the cold kitchen.",
+      "objects": ["Cup", "Faucet"],
+      "connections": [
+        { "name": "backToDiningRoom", "description": "A door leading back to the dining room", "targetLocationName": "DiningRoom" }
+      ],
+      "character": null
+    },
+    {
+      "name": "StudyRoom",
+      "description": "A small study with scattered papers and a dusty desk.",
+      "image": "assets/images/locations/study_room.jpg",
+      "message": "You enter a cramped study.",
+      "objects": ["Secret Document", "Mysterious Box", "Study Window", "Secret Chamber Door"],
+      "connections": [
+        { "name": "backToEntranceHall", "description": "A door leading back to the entrance hall", "targetLocationName": "EntranceHall" },
+        { "name": "toServantQuartersDoor", "description": "A door leading to the servant quarters", "targetLocationName": "ServantQuarters" },
+        { "name": "toDiningRoomDoor", "description": "A door leading to the dining room", "targetLocationName": "DiningRoom" },
+        { "name": "backToStorageRoom", "description": "A door leading back to the storage room", "targetLocationName": "StorageRoom" }
+      ],
+      "character": null
+    },
+    {
+      "name": "GardenExit",
+      "description": "Broken glass and overgrown ivy surround a shattered window leading outside.",
+      "image": "assets/images/locations/garden_exit.jpg",
+      "message": "Cold night air seeps through the broken window.",
+      "objects": [],
+      "connections": [],
+      "character": null
+    },
+    {
+      "name": "ServantQuarters",
+      "description": "Narrow beds line the wall. Old photos and a solid metal rod rest by the door.",
+      "image": "assets/images/locations/servant_quarters.jpg",
+      "message": "You enter the servants' quarters.",
+      "objects": ["Metal Rod"],
+      "connections": [
+        { "name": "backToEntranceHall", "description": "A door leading back to the entrance hall", "targetLocationName": "EntranceHall" },
+        { "name": "backToStudyRoomDoor", "description": "A door leading to the study room", "targetLocationName": "StudyRoom" }
+      ],
+      "character": "Lost Maid"
+    },
+    {
+      "name": "Library",
+      "description": "Shelves of musty books and a faintly gleaming watch. There is a hidden passage to the study room.",
+      "image": "assets/images/locations/library.jpg",
+      "message": "You have entered the Library.",
+      "objects": ["Pocket Watch", "Bookshelf"],
+      "connections": [
+        { "name": "backToEntranceHall", "description": "A door leading back to the entrance hall", "targetLocationName": "EntranceHall" },
+        { "name": "backToDiningRoomDoor", "description": "A door leading to the dining room", "targetLocationName": "DiningRoom" },
+        { "name": "Secret Passage", "description": "A hidden door leads to the study room", "targetLocationName": "StudyRoom" } 
+      ],
+      "character": "Caretaker"
+    },
+    {
+      "name": "SecretChamber",
+      "description": "A cramped, pitch-dark chamber. You sense something valuable here, but without a strong light, you can't see anything.",
+      "image": "assets/images/locations/secret_chamber.jpg",
+      "message": "The darkness is overwhelming. Maybe a bright light could reveal the chamber's secrets.",
+      "objects": ["Treasure"],
+      "connections": [
+        { "name": "backToLibraryDoor", "description": "A door leading back to the library", "targetLocationName": "Library" }
+      ],
+      "character": null
+    }
+  ],
+
+  "objects": [
+            {
+              "name": "Open Door",
+              "description": "A heavy door now unlocked, leading to the library.",
+              "image": "assets/images/objects/open_door.png",
+              "attributes": ["connection"],
+              "containedObjects": [],
+              "pickable": false,
+              "useRuleNames": []
+            },
+        {
+          "name": "Library Door",
+          "description": "A door to the library, now unlocked.",
+          "image": "assets/images/objects/library_door.png",
+          "attributes": ["connection"],
+          "containedObjects": [],
+          "pickable": false,
+          "useRuleNames": []
+        },
+    {
+      "name": "Red Door",
+      "description": "A heavy red door blocks your way. It is locked and impassable without the right key.",
+      "image": "assets/images/objects/red_door.png",
+      "attributes": ["locked", "door"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": ["unlockWithBrassKey"]
+    },
+    {
+      "name": "Old Map",
+      "description": "An old map covered in cryptic symbols. Some markings suggest a hidden route leading upstairs.",
+      "image": "assets/images/objects/old_map.png",
+      "attributes": [],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["examineOldMap"]
+    },
+    {
+      "name": "Brass Key",
+      "description": "A small brass key, cold to the touch. It looks like it could open a locked door.",
+      "image": "assets/images/objects/brass_key.png",
+      "attributes": ["key", "brass"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Pocket Watch",
+      "description": "A worn pocket watch, its surface scratched but still ticking faintly. It seems to hold sentimental value.",
+      "image": "assets/images/objects/pocket_watch.png",
+      "attributes": ["valuable"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Bookshelf",
+      "description": "A large, heavy bookshelf. The wood grain on one side seems new, and there may be a hidden keyhole or mechanism.",
+      "image": "assets/images/objects/bookshelf.png",
+      "attributes": ["furniture"],
+      "containedObjects": ["Secret Document"],
+      "pickable": false,
+      "useRuleNames": []
+    },
+    {
+      "name": "Secret Document",
+      "description": "A faded document that hints at the existence of a key to a hidden chamber.",
+      "image": "assets/images/objects/secret_document.png",
+      "attributes": ["lore"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Library Key",
+      "description": "A small key given to you by the caretaker. It looks like it could unlock something important.",
+      "image": "assets/images/objects/library_key.png",
+      "attributes": ["key"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": [] 
+    },
+    {
+      "name": "Secret Chamber Key",
+      "description": "A mysterious key said to open a hidden chamber somewhere in the mansion.",
+      "image": "assets/images/objects/secret_chamber_key.png",
+      "attributes": ["key"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Treasure",
+      "description": "A box of old coins and a path out. But it's too dark to see anything clearly. ",
+      "image": "assets/images/objects/treasure.png",
+      "attributes": [],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": []
+    },
+    {
+      "name": "Note",
+      "description": "A hint: 'Check the bookshelf.' The note simply reads: 'Check the bookshelf.' (Attributes: none)",
+      "image": "assets/images/objects/note.png",
+      "attributes": [],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Silver Spoon",
+      "description": "A tarnished silver spoon left on the dining table. The spoon is cold and slightly bent. (Attributes: metal)",
+      "image": "assets/images/objects/silver_spoon.png",
+      "attributes": ["metal"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Metal Rod",
+      "description": "A solid metal rod, slightly rusted but rigid — suitable for striking or levering. (Attributes: metal, hard, long, tool)",
+      "image": "assets/images/objects/rope.png",
+      "attributes": ["metal", "hard", "tool"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Cup",
+      "description": "A chipped cup that can still hold water.",
+      "image": "assets/images/objects/cup.png",
+      "attributes": ["container"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["fillCupAtFaucet"],
+      "message": "The cup rattles faintly in your hand."
+    },
+    {
+      "name": "Cup of Water",
+      "description": "A cup filled with cold water. The water ripples with each distant thunderclap. (Attributes: water)",
+      "image": "assets/images/objects/cup_of_water.png",
+      "attributes": ["water"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Rope",
+      "description": "A coiled rope, worn but sturdy. The rope smells faintly of dust and rain. (Attributes: tool, long)",
+      "image": "assets/images/objects/rope.png",
+      "attributes": ["tool"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Glowing Lantern",
+      "description": "A restored lantern that shines with a steady, warm light. It can illuminate even the darkest corners.",
+      "image": "assets/images/objects/glowing_lantern.png",
+      "attributes": ["light", "bright"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["winWithLantern"]
+    },
+    {
+      "name": "Stick",
+      "description": "A sturdy wooden stick, long and hard enough to pry open something. A stick that could be used as a lever. (Attributes: long, hard)",
+      "image": "assets/images/objects/stick.png",
+      "attributes": ["long", "hard"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["pryBoxWithLongObject"]
+    },
+    {
+      "name": "Child's Emblem",
+      "description": "A small medal with a child's drawing. The emblem fits perfectly into the cabinet's slot.",
+      "image": "assets/images/objects/child_emblem.png",
+      "attributes": ["emblem", "child"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["openCabinetWithEmblem"]
+    },
+    {
+      "name": "Faucet",
+      "description": "A dripping faucet that still runs. Cold water drips steadily into the sink. (Attributes: water_source)",
+      "image": "assets/images/objects/faucet.png",
+      "attributes": ["water_source"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": []
+    },
+    {
+      "name": "Old Cabinet",
+      "description": "A locked wooden cabinet covered in dust. There is a slot shaped like a child's emblem. There is something inside. (Contains: Glowing Lantern) (Attributes: furniture, locked)",
+      "image": "assets/images/objects/old_cabinet.png",
+      "attributes": ["furniture", "locked"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": ["openCabinetWithEmblem"]
+    },
+    {
+      "name": "Mysterious Box",
+      "description": "A small box with a tight lid. Only something long and hard can pry it open. The box is tightly shut. You need something long and hard to pry it open. There is something inside. (Contains: Secret Key) (Attributes: container, locked)",
+      "image": "assets/images/objects/box.png",
+      "attributes": ["locked"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": ["pryBoxWithLongObject"]
+    },
+    {
+      "name": "Secret Key",
+      "description": "A small rusty key that was hidden inside a box.",
+      "image": "assets/images/objects/secret_key.png",
+      "attributes": ["key"],
+      "containedObjects": [],
+      "pickable": true,
+      "useRuleNames": []
+    },
+    {
+      "name": "Secret Chamber Door",
+      "description": "A heavy locked door leading to the secret chamber. The door is locked tight. Maybe a special key will open it. (Attributes: door, locked)",
+      "image": "assets/images/objects/secret_chamber_door.png",
+      "attributes": ["door", "locked", "connection"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": ["unlockSecretChamberWithSecretKey"]
+    },
+    {
+      "name": "Study Window",
+      "description": "A window that looks just big enough to escape through, but it's stuck. The glass looks old and brittle — something hard could break it to make an opening. (Attributes: window)",
+      "image": "assets/images/objects/study_window.png",
+      "attributes": ["window"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": ["breakWindowWithHardObject"]
+    },
+    {
+      "name": "Window Escape",
+      "description": "An opening through the window that leads to the garden. You can go through it to escape.",
+      "image": "assets/images/objects/window_escape.png",
+      "attributes": ["connection"],
+      "containedObjects": [],
+      "pickable": false,
+      "useRuleNames": []
+    },
+    {
+      "name": "Unlocked Box",
+      "description": "The box is now open. There is a secret key hidden inside.(Attributes: container, open)",
+      "image": "assets/images/objects/unlocked_box.png",
+      "attributes": ["container", "open"],
+      "containedObjects": ["Secret Key"],
+      "pickable": true,
+      "useRuleNames": ["useUnlockedBox"]
+    }
+  ],
+
+  "characters": [
+    {
+      "name": "Caretaker",
+      "description": "A weary old man.",
+      "image": "assets/images/characters/caretaker.png",
+      "dialoguePhrases": [
+        "Welcome, stranger.",
+        "Have you seen my pocket watch?",
+        "There's a secret passage somewhere!"
+      ],
+      "giveRule": "givePocketWatchToCaretaker",
+      "noMoreDialogueMessage": "The caretaker has nothing more to say.",
+      "currentPhraseIndex": 0
+    },
+    {
+      "name": "Lost Maid",
+      "description": "A pale maid who seems unsure if she is still alive.",
+      "image": "assets/images/characters/lost_maid.png",
+      "dialoguePhrases": [
+        "Have you seen a silver spoon?",
+        "I remember setting the table… then nothing.",
+        "The bookshelf in the library… it moves when unlocked."
+      ],
+      "giveRule": "giveSilverSpoonToLostMaid",
+      "noMoreDialogueMessage": "The maid fades, her voice only a memory.",
+      "currentPhraseIndex": 0
+    },
+    {
+      "name": "Ghostly Boy",
+      "description": "A faint ghost of a young boy sitting at the long table.",
+      "image": "assets/images/characters/ghostly_boy.png",
+      "dialoguePhrases": [
+        "I'm so thirsty...",
+        "The house is cold.",
+        "I can't remember how I got here."
+      ],
+      "giveRule": "giveCupOfWaterToGhostBoy",
+      "noMoreDialogueMessage": "The boy is gone. Only the echo of his voice remains.",
+      "currentPhraseIndex": 0
+    }
+  ],
+
+  "useRules": [
+        {
+          "name": "fillCupAtFaucet",
+          "objectNames": ["Cup", "Faucet"],
+          "subjectAttribute": null,
+          "text": "You fill the cup with cold water from the faucet.",
+          "resultingObjects": ["Cup of Water"],
+          "placeInInventory": true,
+          "endGame": false
+        },
+    {
+      "name": "unlockWithBrassKey",
+      "objectNames": ["Brass Key", "Red Door"],
+      "subjectAttribute": null,
+      "text": "The key turns and the red door unlocks with a satisfying click. The way to the library is now open.",
+      "resultingObjects": ["Open Door"],
+      "resultLocation": "Library",
+      "endGame": false
+    },
+    {
+      "name": "examineOldMap",
+      "objectNames": ["Old Map"],
+      "subjectAttribute": null,
+      "text": "The map shows a hidden passage behind the library bookshelf. An arrow suggests you should check the upstairs landing first.",
+      "resultingObjects": [],
+      "endGame": false
+    },
+    {
+      "name": "pryBoxWithLongObject",
+      "objectNames": ["Mysterious Box", "*"],
+      "subjectAttribute": "hard",
+      "text": "You use the long and hard object to pry open the box. The box pops open!",
+      "resultingObjects": ["Unlocked Box"],
+      "endGame": false
+    },
+    {
+      "name": "useUnlockedBox",
+      "objectNames": ["Unlocked Box"],
+      "subjectAttribute": null,
+      "text": "You search the unlocked box and find a secret key!",
+      "resultingObjects": ["Secret Key"],
+      "endGame": false
+    },
+    {
+      "name": "unlockSecretChamberWithSecretKey",
+      "objectNames": ["Secret Key", "Secret Chamber Door"],
+      "subjectAttribute": null,
+      "text": "You unlock the heavy door with the secret key. The way to the secret chamber is open!",
+      "resultingObjects": ["Secret Chamber Door"],
+      "resultLocation": "SecretChamber",
+      "endGame": false
+    },
+    {
+      "name": "breakWindowWithHardObject",
+      "objectNames": ["Study Window", "*"],
+      "subjectAttribute": "hard",
+      "text": "You strike the window with the hard object. The brittle glass shatters with a crash and a safe opening is created — careful of the shards. Now use 'go Window Escape' to climb down and leave the mansion.",
+      "resultingObjects": ["Window Escape"],
+      "resultLocation": "GardenExit",
+      "endGame": false
+    },
+    
+    {
+      "name": "winWithLanternAndTreasure",
+      "objectNames": ["Glowing Lantern", "Treasure"],
+      "subjectAttribute": null,
+      "text": "You shine the glowing lantern on the treasure. The chest bursts open, spilling glittering riches — you have obtained the treasure and escape triumphant!",
+      "resultingObjects": [],
+      "endGame": true
+    },
+    {
+      "name": "openCabinetWithEmblem",
+      "objectNames": ["Child's Emblem", "Old Cabinet"],
+      "subjectAttribute": null,
+      "text": "You press the child's emblem into the slot. It fits perfectly! The cabinet unlocks with a soft click, revealing a glowing lantern inside.",
+      "resultingObjects": ["Glowing Lantern"],
+      "endGame": false
+    }
+  ],
+
+
+  "giveRules": [
+    {
+      "name": "givePocketWatchToCaretaker",
+      "character": "Caretaker",
+      "object": "Pocket Watch",
+      "text": "The caretaker beams. 'Thank you! Take this key to the hidden passage.'",
+      "resultingObjects": ["Library Key"],
+      "endGame": false
+    },
+    {
+      "name": "giveSilverSpoonToLostMaid",
+      "character": "Lost Maid",
+      "object": "Silver Spoon",
+      "text": "The maid clutches the spoon and smiles. 'Thank you... Remember: the bookshelf requires a key to move.'",
+      "resultingObjects": [],
+      "endGame": false
+    },
+    {
+      "name": "giveCupOfWaterToGhostBoy",
+      "character": "Ghostly Boy",
+      "object": "Cup of Water",
+      "text": "The boy drinks silently, then fades. A small medal with a child's drawing (Child's Emblem) is left on the chair, glowing softly.",
+      "resultingObjects": ["Child's Emblem"],
+      "endGame": false
+    }
+  ],
+
+  
+
+  "commandMessages": {
+    "messages": {
+      "drop": ["You dropped the item.", "You cannot drop that here."],
+      "give": ["", "You can't give that."],
+      "pick": ["You picked up the item.", "You cannot pick up this item."],
+      "examine": ["", "There's nothing to examine."],
+      "use": ["", "That doesn't work."],
+      "go": ["You move to the next location.", "You can't go that way."],
+      "pickup": ["You picked up the item.", "You cannot pick up this item."],
+      "talk": ["", "No one responds."],
+      "inventory": ["You view the items in your inventory.", "Your inventory is empty."]
+    }
+  }
+}

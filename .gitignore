@@ -1,0 +1,13 @@
+# Java build artifacts
+*.class
+
+# Editor settings
+.vscode/
+
+# macOS metadata
+.DS_Store
+
+# Temporary save files
+saves/autosave.json
+saves/*.tmp
+saves/*.temp

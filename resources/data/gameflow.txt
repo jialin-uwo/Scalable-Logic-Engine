@@ -1,0 +1,68 @@
+
+
+Main Path (SecretChamber Ending):
+
+1. EntranceHall
+    1.1 EXAMINE: Old Map (optional)
+      // Note: Recommend the player examine the Old Map first to get hints to "go upstairs" and that the library has a hidden passage.
+    1.2 GO: Staircase (go upstairs to UpstairsLanding)
+2. UpstairsLanding
+  2.1 PICKUP: Brass Key
+    2.2 EXAMINE: Note (optional)
+      // Note: The Note hints "Check the bookshelf", foreshadowing the hidden passage to search for in the Library.
+  2.3 GO: Staircase（go back to  EntranceHall）
+3. EntranceHall
+  3.1 USE: Brass Key + Red Door (unlocks the Library Door connection)
+  3.2 GO: Open Door (go through the door into the Library)
+4. Library
+    4.1 TALK: Caretaker (optional — not used currently; reserved for future side content)
+      // Note: The Caretaker may say things like "There's a secret passage somewhere!", hinting at a hidden passage in the Library.
+  4.2 GO: Dining Room Door (go through the door into the DiningRoom)
+5. DiningRoom
+    5.1 TALK: Ghostly Boy
+      // Note: The Ghostly Boy may say "I'm so thirsty...", prompting the player to fetch water from the Kitchen.
+    5.3 GO: Kitchen Door (go through the door into the Kitchen)
+6. Kitchen
+  6.1 PICKUP: Cup
+    6.2 USE: Cup + Faucet (get Cup of Water)
+      // Note: Only after talking to the Ghostly Boy will the player think to fill the cup with water.
+    6.3 GO: Dining Room Door (return through the door to the DiningRoom)
+7. DiningRoom
+    7.1 GIVE: Cup of Water to Ghostly Boy (get Child's Emblem)
+      // Note: This action can only be completed after obtaining water.
+    7.2 GO: Storage Room Door (go through the door into the StorageRoom)
+8. StorageRoom
+    8.1 USE: Child's Emblem + Old Cabinet (get Glowing Lantern)
+      // Note: You must first obtain the Child's Emblem (by helping the Ghostly Boy) to open the cabinet.
+    8.2 PICKUP: Glowing Lantern and Stick
+    8.3 GO: Study Room Door (go through the door into the StudyRoom)
+9. StudyRoom
+ 9.1 EXAMINE: Mysterious Box (reveals hint: requires a long and hard object to open)
+  9.1 USE: Stick + Mysterious Box (replace with Unlocked Box)
+    // Note: Requires obtaining the Stick first.
+  9.2 Examine: Unlocked Box (get Secret Key)
+    // Note: The Secret Key can only be obtained by examining the unlocked box.
+  9.3 PICKUP: Secret Key
+  9.4 USE: Secret Key + Secret Chamber Door (unlock the Secret Chamber Door connection)
+  9.5 GO: Secret Chamber Door (go through the door into the SecretChamber)
+10. SecretChamber
+ 10.1 Examine: Treasure (hint: needs to be lit)
+  10.1 USE: Glowing Lantern in SecretChamber (trigger Main Ending)
+    // Note: The chamber is dark — you must use the Glowing Lantern to illuminate the Treasure to trigger the ending.
+
+
+Side Path (GardenExit Ending):
+
+1. EntranceHall
+  1.1 GO: Servant Quarters Door (go through the door into ServantQuarters)
+2. ServantQuarters
+  2.1 PICKUP: Metal Rod
+  2.2 GO: Entrance Hall Door (return through the door to EntranceHall)
+  2.3 GO: Study Room Door (go through the door into StudyRoom)
+3. StudyRoom
+  3.1 (Optional) EXAMINE: Study Window
+    // Note: Recommend the player examine the Study Window to discover that a hard object can break it.
+  3.2 USE: Hard object (e.g., Metal Rod) + Study Window (break the window and create WindowEscape)
+  3.3 GO: WindowEscape (escape through the window to GardenExit)
+4. GardenExit
+  4.1 ESCAPE: Side Ending

@@ -1,0 +1,171 @@
+
+
+You wake to the sound of distant thunder.
+
+The air is heavy with the smell of dust, old wood, and rain leaking through cracked window frames.
+You are lying on the cold floor of a storm-battered mansion—vast, silent, and shifting faintly with each gust of wind.
+You do not remember how you arrived here.
+
+Somewhere deep within the house, a clock ticks.
+Somewhere else, the wind seems to whisper.
+You feel watched.
+
+A chill settles on your skin, and you sense a strange truth:
+
+The mansion remembers everyone who wanders inside.
+And if you linger too long, it will remember you forever.
+
+Your goal is simple:
+
+Escape the mansion before 50 turns pass.
+
+If the lights fade and the ticking stops, the house will close around you.
+
+Act I — The Awakening (Entrance Hall)
+
+You stand in the Entrance Hall, lit only by flashes of lightning through stained-glass windows.
+A heavy Red Door stands to the east, its brass hinges rusted over.
+Someone has scratched a message across the surface:
+
+“Some doors are forgotten, some choose not to open.”
+
+A side table holds an Old Map, edges curled with damp.
+Faded markings circle a point in the Library, next to the words:
+“Behind the shelf.”
+
+A staircase rises north into darkness.
+
+Despite the Red Door appearing locked,
+a draft from the east tells you there is already a gap—
+a narrow, usable passage that leads straight to the Library.
+
+The house wants you to move.
+
+Act II — The Upstairs Landing
+
+The stairs creak under your weight as you reach the Upstairs Landing.
+A huge portrait hangs crookedly, its frame broken.
+Beneath it lies a Brass Key,
+and beside that, a short Note:
+
+“Check the bookshelf. It shifts when the time is right.”
+
+The thunder outside intensifies.
+You feel the house adjusting its weight—
+like an old animal waking.
+
+Act III — The Library
+
+Warm yellow light pools across worn carpets as you step into the Library.
+
+Shelves stretch to the ceiling—some full, some empty, some slanted dangerously.
+A tired Caretaker sits beneath a green reading lamp.
+His eyes lift weakly when you enter.
+
+“Welcome… stranger.
+Have you… seen my pocket watch?”
+
+A small Pocket Watch rests on a desk nearby, its chain broken.
+Beside it, a massive Bookshelf stands flush against the northern wall.
+Scratches in the floorboards suggest it has been moved—recently.
+
+Even without solving the shelf’s mechanism,
+a narrow hidden passage stands slightly ajar to the north.
+You could enter the Secret Chamber immediately…
+but something urges you to explore the room first.
+
+When you return the Pocket Watch, the Caretaker smiles faintly:
+
+“Thank you… I forget things, but the house remembers.
+Here—take this. It opens… something important.”
+
+He presses a Library Key into your hand—
+a useful but optional tool.
+
+Act IV — Optional Mysteries (Side Areas)
+
+Though unnecessary for escape, several parts of the mansion offer deeper insight into the house’s past.
+
+Dining Room — The Ghostly Boy
+
+A faint shape flickers at the long dining table.
+A boy’s voice whispers:
+
+“Thirsty… so thirsty...”
+
+If you bring him Cup of Water from the Kitchen,
+he fades gently, leaving behind an Old Room Key—
+a relic tied to forgotten servants.
+
+Servants’ Quarters — The Lost Maid
+
+A pale figure sits on an old bed,
+fingering a Silver Spoon as if searching for something.
+
+When given the spoon, she nods:
+
+“The passage… behind the shelf… it was meant to be secret.”
+
+She vanishes in a gust of cold air.
+
+Storage Room — Unused Lantern
+
+A dusty cupboard hides a Broken Lantern.
+When held, its flickering light seems almost afraid of the house.
+
+Study Room — Old Papers
+
+Documents mention vanished workers,
+secret renovations,
+and a phrase repeated throughout:
+
+“The house remembers.”
+
+Act V — The Secret Passage
+
+Whether you open it with the optional Library Key,
+or simply slip through the always-available gap,
+you enter a narrow, cold corridor.
+
+The walls tremble, dust falls from the ceiling.
+
+Something deep inside the house is waking.
+
+Act VI — The Secret Chamber (Final Area)
+
+A final chamber lies beyond the passage.
+A short stone pedestal holds a small chest of old coins.
+A cold wind blows from a vent leading outside.
+
+As you step toward the draft, the ceiling groans.
+The ticking of the hidden clock grows louder, then stops entirely.
+
+You climb through the vent into the stormy night.
+
+Behind you, the house closes its doors.
+
+Ending A — Escape
+
+(If you reach before 50 turns)
+
+You breathe cold, clean air.
+Rain hits your face.
+You survived.
+But as you look back at the mansion,
+for a moment you think you see a figure staring from the Library window.
+
+The house remembers you.
+
+Ending B — The House Keeps You
+
+(If 50 turns expire)
+
+The lights die.
+Footsteps echo in the halls behind you.
+Your vision dims as the air grows heavy.
+
+One final whisper escapes the darkness:
+
+“Stay…”
+
+You are never seen again.
