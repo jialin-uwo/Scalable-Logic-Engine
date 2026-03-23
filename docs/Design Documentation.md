@@ -100,7 +100,7 @@ GameEngine interacts with GameData, Command and GameUI.
 - Encapsulation of game state within GameEngine improves maintainability and reduces side effects.   
 - Modular subsystems facilitate independent testing and future expansions.
 
-![alt text](./images/design-image-1.png)
+![alt text](/docs/images/design-image1.png)
 The image above provides a zoomed-out overview of the core class diagram.  
 For a readable, zoomable version with all classes, attributes, and relationships, please use the interactive diagram below:
 
