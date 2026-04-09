@@ -7,7 +7,7 @@
  * and handles user interactions such as executing commands, resetting the game,
  * and quitting.
  *
- * @author Zhixian Wang
+ * @author Zhixian Wang, Jialin Li
  */
 
 import javax.swing.*;
