@@ -6,7 +6,7 @@
  * The engine also implements {@link IEngineCallback} so that the UI can notify
  * the engine of user actions (commands, reset, quit).
  *
- * @author Xinyan Cai
+ * @author Xinyan Cai, Jialin Li
  */
 
 import java.util.Locale;
